@@ -147,7 +147,7 @@ body{
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
     margin-bottom: 8px;
     break-inside: avoid;
@@ -165,10 +165,26 @@ body{
 .task-item label {
     display: flex;
     flex: 1;
-    align-items: center;
-    gap: 12px;
+    gap: 15px;
     cursor: pointer;
     padding: 12px 15px;
+}
+
+/* delete button */
+.delete-btn{
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    padding: 12px 8px;
+}
+
+.delete-btn svg{
+    vertical-align: top;
+    fill: #999;
+}
+
+.delete-btn:hover svg{
+    fill: var(--accent-light);
 }
 
 /* checkbox */
@@ -178,6 +194,7 @@ body{
     border-radius: 5px;
     width: 20px;
     height: 20px;
+    margin-top: 3px;
     cursor: pointer;
     position: relative;
 }
@@ -205,11 +222,6 @@ body{
     transform: rotate(45deg);
 }
 
-.task-check:checked+.task-text{
-    text-decoration: line-through;
-    color: #999;
-}
-
 .task-text{
     flex: 1;
     overflow-wrap: break-word;
@@ -217,22 +229,9 @@ body{
     white-space: normal;
 }
 
-/* delete button */
-.delete-btn{
-    align-self: stretch;
-    background-color: transparent;
-    cursor: pointer;
-    border: none;
-    padding: 8px;
-}
-
-.delete-btn svg{
-    vertical-align: middle;
-    fill: #999;
-}
-
-.delete-btn:hover svg{
-    fill: var(--accent-light);
+.task-check:checked+.task-text{
+    text-decoration: line-through;
+    color: #999;
 }
 
 /* done */
