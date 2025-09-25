@@ -237,7 +237,7 @@ body{
     }
 
     .task-check:hover{
-        border-color: var(--accent-light);
+        border-color: var(--accent);
     }
 }
 
