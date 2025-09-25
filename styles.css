@@ -94,10 +94,6 @@ body{
     border: 1px solid var(--primary-muted);
 }
 
-#task-input:focus, #task-input:hover {
-    background: var(--primary-light);
-}
-
 #task-input:focus{
     outline: 2px solid var(--accent);
 }
@@ -112,10 +108,6 @@ body{
 
 #add-btn svg{
     vertical-align: middle;
-}
-
-#add-btn:hover{
-    background-color: var(--accent-light);
 }
 
 #add-btn:active{
@@ -154,10 +146,6 @@ body{
     break-inside: avoid;
 }
 
-.task-item:hover, .task-item:has(.task-check:checked):hover{
-    background-color: var(--primary-hover);
-}
-
 .task-item:has(.task-check:checked){
     background-color: var(--primary-muted);
     transform: scale(0.95);
@@ -184,10 +172,6 @@ body{
     fill: #999;
 }
 
-.delete-btn:hover svg{
-    fill: var(--accent-light);
-}
-
 .delete-btn:active svg{
     fill: var(--accent);
 }
@@ -202,11 +186,6 @@ body{
     margin-top: 3px;
     cursor: pointer;
     position: relative;
-}
-
-
-.task-check:hover{
-    border-color: var(--accent-light);
 }
 
 .task-check:checked{
@@ -237,6 +216,29 @@ body{
 .task-check:checked+.task-text{
     text-decoration: line-through;
     color: #999;
+}
+
+/* hover effects on larger screens only */
+@media (min-width: 768px) {
+    .task-item:hover, .task-item:has(.task-check:checked):hover{
+        background-color: var(--primary-hover);
+    }
+
+    #task-input:focus, #task-input:hover {
+        background: var(--primary-light);
+    }
+
+    #add-btn:hover{
+        background-color: var(--accent-light);
+    }
+
+    .delete-btn:hover svg{
+        fill: var(--accent-light);
+    }
+
+    .task-check:hover{
+        border-color: var(--accent-light);
+    }
 }
 
 /* done */
